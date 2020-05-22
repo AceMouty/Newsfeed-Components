@@ -176,6 +176,8 @@ const newArticles = data.map( (article) => {
 	return newArticle;
 })
 
+
+
 newArticles.forEach((newArticle) =>{
 	articles.appendChild(newArticle);
 })
