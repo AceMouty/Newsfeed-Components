@@ -134,7 +134,12 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 	const para1 = document.createElement('p');
 	const para2 = document.createElement('p');
 	const para3 = document.createElement('p');
-	const span = document.createElement('span');
+  const span = document.createElement('span');
+  // font awesome elm
+  const faIcon = document.createElement("i");
+
+  // Setup span with Font Awesome Icon
+  span.appendChild(faIcon);
 
 	// Setup Element Structure
 	articleDiv.appendChild(articleHeading);
@@ -142,12 +147,16 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 	articleDiv.appendChild(para1);
 	articleDiv.appendChild(para2);
 	articleDiv.appendChild(para3);
-	articleDiv.appendChild(span);
+  articleDiv.appendChild(span);
+  
+  // Set Class names for Font Awesome Icon
+  faIcon.classList.add("fa", "fa-chevron-down")
 
 	// Set Class Names
 	articleDiv.classList.add('article');
 	datePara.classList.add('date');
-	span.classList.add('expandButton');
+  span.classList.add('expandButton');
+  
 
 	// Set Context
 	articleHeading.textContent = title;
@@ -155,7 +164,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
 	para1.textContent = firstParagraph;
 	para2.textContent = secondParagraph;
 	para3.textContent = thirdParagraph;
-	span.textContent = '\u21E9'
+	// span.textContent = '\u21E9'
 
 	// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 	span.addEventListener('click', () => {

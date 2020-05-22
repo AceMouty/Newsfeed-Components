@@ -54,7 +54,6 @@ window.addEventListener('load', () => {
 	
 		menuBtn.addEventListener('click', () => {
 			menu.classList.toggle('menu--open');
-			console.log(menuBtn);
 		});
 	
 		return menu;
